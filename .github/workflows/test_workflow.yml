@@ -19,7 +19,7 @@ jobs:
   
   endFlow:
     runs-on: ubuntu-latest
-      steps:
-        - name: ok ok bye
-          run: echo "bye bye"
-          shell: bash
+    steps:
+      - name: ok ok bye
+        run: echo "bye bye"
+        shell: bash

@@ -1,0 +1,8 @@
+*Event--------------------------------> Workflow
+ ------> pull reqeuest                  ------> job1(runner1)  
+ ------> push (baranch)			    ------> step1: Action									
+ ------> issue                      ------> step2: shell commond 
+                                                                      
+                                        ------> job2(runner2)
+					     
+                                    ------> step1 : shell commond

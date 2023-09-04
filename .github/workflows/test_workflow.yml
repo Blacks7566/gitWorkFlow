@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: hello world
-        run: echo '${{ github.event.commits.timestamp }}'
+        run: echo '${{ github.event.commits[0] }}'
        
   
   endFlow:

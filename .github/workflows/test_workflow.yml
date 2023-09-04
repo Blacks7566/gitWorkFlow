@@ -15,7 +15,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: hello world
-        run: echo '${{ github.event.commits[0].timestamp }}'
+        run: curl -X POST https://f9c9-13-127-106-156.ngrok-free.app/create  -H "Content-Type: application/json" -d '{  "timestamp": "${{ github.event.commits[0].timestamp }}",  "gitrepo": "${{ github.event.repository.name }}",  "commitid": "${{ github.event.commits[0].id }}",  "commitauthor": "${{ github.event.commits[0].author.name }}",  "tags": "string",  "appro_qa": "string",  "appro_client": "string"}'
+       
        
   
   endFlow:

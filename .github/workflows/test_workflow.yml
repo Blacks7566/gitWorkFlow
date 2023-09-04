@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: hello world
-        run: echo "This is black soul task"
+        run: echo '${{ toJSON(github.event) }}' | jq
   
   endFlow:
     runs-on: ubuntu-latest

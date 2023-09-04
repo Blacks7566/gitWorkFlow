@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: hello world
-        run: echo '${{ toJSON(github.event_name) }}' | jq
+        run: echo '${{ toJSON(github.event) }}' | jq
   
   endFlow:
     runs-on: ubuntu-latest

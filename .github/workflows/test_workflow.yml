@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: hello world
-        run: echo '${{ toJSON(github.event) }} ,${{ toJSON(github.event.timestamp) }} ,${{ toJSON(github.event.id) }}' | jq
+        run: echo '${{ toJSON(github.event.timestamp}}' | jq
        
   
   endFlow:

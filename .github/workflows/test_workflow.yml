@@ -15,7 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: hello world
-        run: echo '{ "timestamp":"${{ github.event.commits[0].timestamp }}","gitrepo":"${{ github.event.repository.name }}","commitid":"${{ github.event.commits[0].id }}",  "commitauthor":"${{ github.event.commits[0].author.name }}",  "tags":"string", "appro_qa":"false",  "appro_client":"false",  "branch":"main",  "stage":"text",  "project":"new"}' | curl -k -X POST -H "Content-Type:application/json" -d @- https://03e8-2405-201-301e-505f-2903-2a23-97ce-143a.ngrok-free.app/create
+        run: echo '{"timestamp":"${{ github.event.commits[0].timestamp }}","gitrepo":"${{ github.event.repository.name }}","commitid":"${{ github.event.commits[0].id }}",  "commitauthor":"${{ github.event.commits[0].author.name }}",  "tags":"string", "appro_qa":"false",  "appro_client":"false",  "branch":"main",  "stage":"text",  "project":"new"}' | curl -k -X POST -H "Content-Type:application/json" -d @- https://03e8-2405-201-301e-505f-2903-2a23-97ce-143a.ngrok-free.app/create
        
   
   endFlow:

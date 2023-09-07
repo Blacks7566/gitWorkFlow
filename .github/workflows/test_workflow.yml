@@ -1,26 +1,13 @@
-name: Test workflow
-
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
-  workflow_dispatch:
-
+name: learn-github-actions
+run-name: ${{ github.actor }} is learning GitHub Actions
+on: [push]
 jobs:
-  hello:
+  check-bats-version:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: update in google sheet
-        run: echo ' {"timestamp":"${{ github.event.commits[0].timestamp }}","gitrepo":"${{ github.event.repository.name }}","commitid":"${{ github.event.commits[0].id }}",  "commitauthor":"${{ github.event.commits[0].author.name }}",  "tags":"string", "appro_qa":"false",  "appro_client":"false",  "branch":"main",  "stage":"text", "project":"new"}' | curl -k -X POST -H "Content-Type:application/json" -d @- https://8abe-2405-201-301e-505f-2903-2a23-97ce-143a.ngrok-free.app/create
-       
-  
-  endFlow:
-    runs-on: ubuntu-latest
-    steps:
-      - name: ok ok bye
-        run: echo "bye bye"
-        shell: bash
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: '14'
+      - run: npm install -g bats
+      - run: bats -v

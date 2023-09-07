@@ -15,4 +15,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: update in google sheet
-        run: echo ' {"timestamp":"${{ github.event.commits[0].timestamp }}","gitrepo":"${{ github.event.repository.name }}","commitid":"${{ github.event.commits[0].id }}",  "commitauthor":"${{ github.event.commits[0].author.name }}",  "tags":"string", "appro_qa":"false",  "appro_client":"false",  "branch":"main",  "stage":"text", "project":"new"}' | curl -k -X POST -H "Content-Type:application/json" -d @- https://4057-13-127-106-156.ngrok-free.app/create
+        run: echo '{"timestamp":"${{ github.event.commits[0].timestamp }}","gitrepo":"${{ github.event.repository.name }}","commitid":"${{ github.event.commits[0].id }}",  "commitauthor":"${{ github.event.commits[0].author.name }}",  "tags":"string", "appro_qa":"false",  "appro_client":"false",  "branch":"main",  "stage":"text", "project":"new"}' | curl -k -X POST -H "Content-Type:application/json" -d @- https://4057-13-127-106-156.ngrok-free.app/create

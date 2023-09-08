@@ -1,3 +1,6 @@
+String git flow
+
+
 *Event--------------------------------> Workflow
  ------> pull reqeuest                  ------> job1(runner1)  
  ------> push (baranch)			    ------> step1: Action									
@@ -6,3 +9,24 @@
                                         ------> job2(runner2)
 					     
                                     ------> step1 : shell commond
+
+
+
+
+CI
+---------
+
+Project 
+[ projects repository ]                  ---------                           [smoke test , build, Runs ]
+   ^    ^      ^    ^
+   |    |      |    |
+                                           
+[f1-b] [f2-b] [f3-b] [f4-b] (Feature branchs)
+ m        m      f      m  (dev team)
+
+
+
+step1-> Automating the build
+step2-> Introduec automented test (Unit test,Intrigation)
+step3-> linting (coding style)
+step4->  securty scanning 
